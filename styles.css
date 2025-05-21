@@ -387,8 +387,7 @@ MODAL
 
 /* Modal Overlay */
 
-.modal__overlay--loading,
-.modal__overlay--success {
+.modal__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -397,12 +396,12 @@ MODAL
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1;
 }
 
 .modal__overlay--loading {
   background-color: #242424;
   font-size: 80px;
-  z-index: -1;
 }
 
 .fa-spinner {
@@ -424,6 +423,10 @@ MODAL
   font-weight: bold;
   padding: 28px;
   text-align: center;
+}
+
+.modal__overlay--visible {
+  z-index: 1;
 }
 
 .fa-xmark {
